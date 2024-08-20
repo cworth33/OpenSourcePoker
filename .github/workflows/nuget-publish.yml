@@ -1,34 +1,33 @@
-name: .NET Package Publish
+name: Publish NuGet Package
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
-      - name: Set up .NET Core
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '8.x'
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.x'
 
-      - name: Restore dependencies
-        run: dotnet restore
+    - name: Increment version number
+      id: versioning
+      run: |
+        VERSION=$(cat ./DeckValidationService/DeckValidationService.csproj | grep -oPm1 "(?<=<Version>)[^<]+")
+        NEW_VERSION=$(echo $VERSION | awk -F. -v OFS=. '{$NF++;print}')
+        sed -i "s/<Version>$VERSION<\/Version>/<Version>$NEW_VERSION<\/Version>/" ./DeckValidationService/DeckValidationService.csproj
+        echo "New version: $NEW_VERSION"
+        echo "VERSION=$NEW_VERSION" >> $GITHUB_ENV
 
-      - name: Build
-        run: dotnet build --configuration Release --no-restore
+    - name: Pack NuGet package
+      run: dotnet pack ./DeckValidationService/DeckValidationService.csproj --configuration Release /p:PackageVersion=${{ env.VERSION }} --output ./package
 
-      - name: Pack NuGet package
-        run: dotnet pack --configuration Release --no-restore --output ./nupkg
-
-      - name: Publish NuGet package
-        env:
-          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
-        run: dotnet nuget push "./nupkg/*.nupkg" --api-key $NUGET_API_KEY --source https://api.nuget.org/v3/index.json
+    - name: Publish to NuGet
+      env:
+        NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+      run: dotnet nuget push ./package/*.nupkg --api-key $NUGET_API_KEY --source https://api.nuget.org/v3/index.json
