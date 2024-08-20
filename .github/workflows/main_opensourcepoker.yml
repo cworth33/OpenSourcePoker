@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: .net-app
-          path: ./myapp/
+          path: ./myapp
 
   deploy:
     runs-on: windows-latest
@@ -47,6 +47,9 @@ jobs:
         with:
           name: .net-app
 
+      - name: List workspace contents
+        run: ls -R ./
+
       - name: Login to Azure
         uses: azure/login@v2
         with:
@@ -59,4 +62,4 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'OpenSourcePoker'
-          package: './myapp.zip'
+          package: './myapp'
