@@ -1,4 +1,4 @@
-name: Build and deploy ASP.Net Core app to Azure Web App - OpenSourcePoker
+name: Build and deploy ASP.Net Core API to Azure Web App - OpenSourcePoker
 
 on:
   push:
@@ -18,11 +18,11 @@ jobs:
         with:
           dotnet-version: '8.x'
 
-      - name: Build with dotnet
-        run: dotnet build --configuration Release
+      - name: Build API project
+        run: dotnet build ./YourApiProject/YourApiProject.csproj --configuration Release
 
-      - name: dotnet publish
-        run: dotnet publish -c Release -o ./publish
+      - name: Publish API project
+        run: dotnet publish ./YourApiProject/YourApiProject.csproj -c Release -o ./publish
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
