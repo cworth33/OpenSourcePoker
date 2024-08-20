@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/DeckValidationService/bin/Debug/net8.0
+/DeckValidationService/obj
+/DeckValidationService.Tests/bin/Debug/net8.0
+/DeckValidationService.Tests/obj
+/SecureDeck/bin/Debug/net8.0
+/SecureDeck.Tests/bin/Debug/net8.0
+/SecureDeck.Tests/obj
+/SecureDeck/obj
