@@ -25,7 +25,7 @@ jobs:
         echo "VERSION=$NEW_VERSION" >> $GITHUB_ENV
 
     - name: Pack NuGet package
-      run: dotnet pack ./DeckValidationService/DeckValidationService.csproj --configuration Release /p:PackageVersion=${{ env.VERSION }} --output ./package
+      run: dotnet pack ./SecureDeck/SecureDeck.csproj --configuration Release /p:PackageVersion=${{ env.VERSION }} --output ./package
 
     - name: Publish to NuGet
       env:
