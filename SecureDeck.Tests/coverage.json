@@ -1,0 +1,560 @@
+{
+  "SecureDeck.dll": {
+    "C:\\code\\OpenSourcePoker\\SecureDeck\\DeckService.cs": {
+      "SecureDeck.DeckService": {
+        "System.String SecureDeck.DeckService::get_DeckPublicBitcoinAddress()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Void SecureDeck.DeckService::InitializeDeck()": {
+          "Lines": {
+            "31": 7,
+            "32": 7,
+            "34": 77,
+            "35": 28,
+            "36": 812,
+            "37": 364,
+            "38": 364,
+            "39": 364,
+            "40": 28,
+            "42": 7,
+            "43": 7
+          },
+          "Branches": [
+            {
+              "Line": 34,
+              "Offset": 136,
+              "EndOffset": 31,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 28
+            },
+            {
+              "Line": 36,
+              "Offset": 104,
+              "EndOffset": 68,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 364
+            },
+            {
+              "Line": 36,
+              "Offset": 104,
+              "EndOffset": 106,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 28
+            },
+            {
+              "Line": 34,
+              "Offset": 136,
+              "EndOffset": 138,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 7
+            }
+          ]
+        },
+        "System.Void SecureDeck.DeckService::ShuffleDeck(System.Collections.Generic.List`1<SecureDeck.Models.ShuffleParticipant>)": {
+          "Lines": {
+            "47": 7,
+            "48": 7,
+            "51": 7,
+            "54": 7,
+            "57": 7,
+            "60": 7,
+            "61": 7
+          },
+          "Branches": []
+        },
+        "System.Void SecureDeck.DeckService::ShuffleWithSeed(System.Byte[])": {
+          "Lines": {
+            "65": 7,
+            "66": 7,
+            "67": 371,
+            "68": 7,
+            "69": 7,
+            "70": 7
+          },
+          "Branches": []
+        },
+        "System.Void SecureDeck.DeckService::RepresentDeckAsBitcoinAddress(System.Byte[])": {
+          "Lines": {
+            "73": 7,
+            "75": 7,
+            "78": 7,
+            "81": 7,
+            "84": 7,
+            "85": 7,
+            "88": 7,
+            "89": 7
+          },
+          "Branches": []
+        },
+        "System.String SecureDeck.DeckService::DeckAsString()": {
+          "Lines": {
+            "93": 7,
+            "94": 371,
+            "95": 7
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<SecureDeck.Models.Card> SecureDeck.DeckService::Deal(System.Int32)": {
+          "Lines": {
+            "99": 4,
+            "100": 4,
+            "101": 1,
+            "102": 1,
+            "105": 3,
+            "106": 3,
+            "107": 3,
+            "108": 3,
+            "109": 3
+          },
+          "Branches": [
+            {
+              "Line": 100,
+              "Offset": 22,
+              "EndOffset": 24,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 100,
+              "Offset": 22,
+              "EndOffset": 36,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            }
+          ]
+        },
+        "SecureDeck.Models.ShuffledDeck SecureDeck.DeckService::GetFinalPostShuffleDeckState()": {
+          "Lines": {
+            "113": 3,
+            "114": 3,
+            "115": 3,
+            "116": 3,
+            "117": 3,
+            "118": 3,
+            "119": 3,
+            "120": 3
+          },
+          "Branches": []
+        },
+        "System.Void SecureDeck.DeckService::.ctor()": {
+          "Lines": {
+            "12": 6,
+            "13": 6,
+            "21": 6,
+            "22": 6,
+            "23": 6,
+            "24": 6,
+            "25": 6,
+            "26": 6,
+            "27": 6
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\code\\OpenSourcePoker\\SecureDeck\\Models\\Card.cs": {
+      "SecureDeck.Models.Card": {
+        "SecureDeck.Models.RankType SecureDeck.Models.Card::get_Rank()": {
+          "Lines": {
+            "7": 840
+          },
+          "Branches": []
+        },
+        "SecureDeck.Models.SuitType SecureDeck.Models.Card::get_Suit()": {
+          "Lines": {
+            "8": 840
+          },
+          "Branches": []
+        },
+        "System.String SecureDeck.Models.Card::ToString()": {
+          "Lines": {
+            "12": 1,
+            "13": 1,
+            "14": 1
+          },
+          "Branches": []
+        },
+        "System.String SecureDeck.Models.Card::ToShortString()": {
+          "Lines": {
+            "18": 366,
+            "19": 366,
+            "20": 366,
+            "21": 28,
+            "22": 28,
+            "23": 28,
+            "24": 28,
+            "25": 28,
+            "26": 28,
+            "27": 28,
+            "28": 28,
+            "29": 29,
+            "30": 28,
+            "31": 28,
+            "32": 28,
+            "33": 29,
+            "34": 0,
+            "35": 366,
+            "37": 366,
+            "38": 366,
+            "39": 92,
+            "40": 91,
+            "41": 91,
+            "42": 92,
+            "43": 0,
+            "44": 366,
+            "46": 366,
+            "47": 366
+          },
+          "Branches": [
+            {
+              "Line": 19,
+              "Offset": 15,
+              "EndOffset": 74,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 28
+            },
+            {
+              "Line": 19,
+              "Offset": 15,
+              "EndOffset": 82,
+              "Path": 2,
+              "Ordinal": 2,
+              "Hits": 28
+            },
+            {
+              "Line": 19,
+              "Offset": 15,
+              "EndOffset": 90,
+              "Path": 3,
+              "Ordinal": 3,
+              "Hits": 28
+            },
+            {
+              "Line": 19,
+              "Offset": 15,
+              "EndOffset": 98,
+              "Path": 4,
+              "Ordinal": 4,
+              "Hits": 28
+            },
+            {
+              "Line": 19,
+              "Offset": 15,
+              "EndOffset": 106,
+              "Path": 5,
+              "Ordinal": 5,
+              "Hits": 28
+            },
+            {
+              "Line": 19,
+              "Offset": 15,
+              "EndOffset": 114,
+              "Path": 6,
+              "Ordinal": 6,
+              "Hits": 28
+            },
+            {
+              "Line": 19,
+              "Offset": 15,
+              "EndOffset": 122,
+              "Path": 7,
+              "Ordinal": 7,
+              "Hits": 28
+            },
+            {
+              "Line": 19,
+              "Offset": 15,
+              "EndOffset": 130,
+              "Path": 8,
+              "Ordinal": 8,
+              "Hits": 28
+            },
+            {
+              "Line": 19,
+              "Offset": 15,
+              "EndOffset": 138,
+              "Path": 9,
+              "Ordinal": 9,
+              "Hits": 29
+            },
+            {
+              "Line": 19,
+              "Offset": 15,
+              "EndOffset": 146,
+              "Path": 10,
+              "Ordinal": 10,
+              "Hits": 28
+            },
+            {
+              "Line": 19,
+              "Offset": 15,
+              "EndOffset": 154,
+              "Path": 11,
+              "Ordinal": 11,
+              "Hits": 28
+            },
+            {
+              "Line": 19,
+              "Offset": 15,
+              "EndOffset": 162,
+              "Path": 12,
+              "Ordinal": 12,
+              "Hits": 28
+            },
+            {
+              "Line": 19,
+              "Offset": 15,
+              "EndOffset": 170,
+              "Path": 13,
+              "Ordinal": 13,
+              "Hits": 29
+            },
+            {
+              "Line": 19,
+              "Offset": 15,
+              "EndOffset": 178,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 37,
+              "Offset": 206,
+              "EndOffset": 229,
+              "Path": 1,
+              "Ordinal": 15,
+              "Hits": 92
+            },
+            {
+              "Line": 37,
+              "Offset": 206,
+              "EndOffset": 237,
+              "Path": 2,
+              "Ordinal": 16,
+              "Hits": 91
+            },
+            {
+              "Line": 37,
+              "Offset": 206,
+              "EndOffset": 245,
+              "Path": 3,
+              "Ordinal": 17,
+              "Hits": 91
+            },
+            {
+              "Line": 37,
+              "Offset": 206,
+              "EndOffset": 253,
+              "Path": 4,
+              "Ordinal": 18,
+              "Hits": 92
+            },
+            {
+              "Line": 37,
+              "Offset": 206,
+              "EndOffset": 261,
+              "Path": 0,
+              "Ordinal": 14,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void SecureDeck.Models.Card::.ctor(SecureDeck.Models.RankType,SecureDeck.Models.SuitType)": {
+          "Lines": {
+            "3": 472
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\code\\OpenSourcePoker\\SecureDeck\\Models\\Deck.cs": {
+      "SecureDeck.Models.Deck": {
+        "System.Collections.Generic.List`1<SecureDeck.Models.Card> SecureDeck.Models.Deck::get_Cards()": {
+          "Lines": {
+            "5": 61
+          },
+          "Branches": []
+        },
+        "System.Void SecureDeck.Models.Deck::InitializeDeck(System.Collections.Generic.List`1<SecureDeck.Models.Card>)": {
+          "Lines": {
+            "15": 9,
+            "16": 9,
+            "17": 9
+          },
+          "Branches": []
+        },
+        "System.Int32 SecureDeck.Models.Deck::get_Count()": {
+          "Lines": {
+            "20": 3
+          },
+          "Branches": []
+        },
+        "System.Void SecureDeck.Models.Deck::.ctor()": {
+          "Lines": {
+            "8": 9,
+            "9": 9,
+            "10": 9,
+            "11": 9
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\code\\OpenSourcePoker\\SecureDeck\\Models\\ShuffledDeck.cs": {
+      "SecureDeck.Models.ShuffledDeck": {
+        "System.String SecureDeck.Models.ShuffledDeck::get_DeckString()": {
+          "Lines": {
+            "5": 9
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<SecureDeck.Models.ShuffleParticipant> SecureDeck.Models.ShuffledDeck::get_Participants()": {
+          "Lines": {
+            "6": 12
+          },
+          "Branches": []
+        },
+        "System.String SecureDeck.Models.ShuffledDeck::get_BitcoinAddress()": {
+          "Lines": {
+            "7": 10
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\code\\OpenSourcePoker\\SecureDeck\\Models\\ShuffleParticipant.cs": {
+      "SecureDeck.Models.ShuffleParticipant": {
+        "System.String SecureDeck.Models.ShuffleParticipant::get_Name()": {
+          "Lines": {
+            "5": 25
+          },
+          "Branches": []
+        },
+        "System.String SecureDeck.Models.ShuffleParticipant::get_Seed()": {
+          "Lines": {
+            "6": 47
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\code\\OpenSourcePoker\\SecureDeck\\Models\\ValidateDeckResult.cs": {
+      "SecureDeck.Models.ValidateDeckResult": {
+        "SecureDeck.Models.ShuffledDeck SecureDeck.Models.ValidateDeckResult::get_Request()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String SecureDeck.Models.ValidateDeckResult::get_ResultingBitcoinAddress()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean SecureDeck.Models.ValidateDeckResult::get_IsValid()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime SecureDeck.Models.ValidateDeckResult::get_ValidatedDate()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\code\\OpenSourcePoker\\SecureDeck\\Helpers\\CryptoHelper.cs": {
+      "SecureDeck.Helpers.CryptoHelper": {
+        "System.String SecureDeck.Helpers.CryptoHelper::GetHashString(System.String,System.Byte[])": {
+          "Lines": {
+            "11": 10,
+            "12": 10,
+            "13": 10,
+            "14": 10,
+            "15": 10,
+            "16": 10,
+            "17": 10,
+            "18": 10,
+            "19": 10
+          },
+          "Branches": []
+        },
+        "System.Byte[] SecureDeck.Helpers.CryptoHelper::CombineSeeds(System.Collections.Generic.List`1<SecureDeck.Models.ShuffleParticipant>)": {
+          "Lines": {
+            "22": 10,
+            "23": 10,
+            "25": 74,
+            "26": 22,
+            "27": 22,
+            "28": 22,
+            "29": 10,
+            "30": 10,
+            "31": 10,
+            "33": 12,
+            "34": 12,
+            "35": 12,
+            "36": 22,
+            "38": 10,
+            "39": 10
+          },
+          "Branches": [
+            {
+              "Line": 25,
+              "Offset": 93,
+              "EndOffset": 17,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 22
+            },
+            {
+              "Line": 28,
+              "Offset": 57,
+              "EndOffset": 59,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 10
+            },
+            {
+              "Line": 28,
+              "Offset": 57,
+              "EndOffset": 65,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 12
+            },
+            {
+              "Line": 25,
+              "Offset": 93,
+              "EndOffset": 95,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 10
+            }
+          ]
+        },
+        "System.String SecureDeck.Helpers.CryptoHelper::GenerateSeed()": {
+          "Lines": {
+            "42": 1,
+            "43": 1,
+            "44": 1,
+            "45": 1
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}
