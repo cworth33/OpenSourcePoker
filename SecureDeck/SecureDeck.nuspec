@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>SecureDeck</id>
+    <version>1.0.0</version>
+    <authors>Casey Worth</authors>
+    <owners>Casey Worth</owners>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/YourUsername/OpenSourcePoker</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A secure deck shuffling library for provably fair card games.</description>
+    <releaseNotes>Initial release of SecureDeck.</releaseNotes>
+    <copyright>Copyright 2024</copyright>
+    <tags>poker card-game deck-shuffling security</tags>
+  </metadata>
+</package>
