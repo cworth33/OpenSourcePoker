@@ -62,4 +62,4 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'OpenSourcePoker'
-          package: './myapp'
+          package: './'
