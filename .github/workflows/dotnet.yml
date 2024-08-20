@@ -1,4 +1,4 @@
-name: .NET
+name: .NET Test Workflow
 
 on:
   push:
@@ -8,35 +8,30 @@ on:
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
+    - uses: actions/checkout@v4
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '8.0.x'
-
+        dotnet-version: 8.0.x
     - name: Restore dependencies
       run: dotnet restore
-
     - name: Build
       run: dotnet build --no-restore
-
-    - name: Run Tests
+    - name: Test
       run: dotnet test --no-build --logger "trx;LogFileName=test_results.trx"
 
-    - name: Convert Test Results to JUnit
-      if: always()
+    - name: Convert and upload test results
       run: |
         dotnet tool install --global trx2junit
-        find . -name 'test_results.trx' -exec trx2junit {} \;
+        trx2junit test_results.trx
+      continue-on-error: true
 
-    - name: Publish Test Results
-      if: always()
+    - name: Upload Test Results
       uses: actions/upload-artifact@v3
       with:
         name: TestResults
-        path: '**/test_results.xml'
+        path: test_results.xml
