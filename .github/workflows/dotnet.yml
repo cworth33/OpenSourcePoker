@@ -13,25 +13,23 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
+
     - name: Restore dependencies
       run: dotnet restore
+
     - name: Build
       run: dotnet build --no-restore
+
     - name: Test
       run: dotnet test --no-build --logger "trx;LogFileName=test_results.trx"
-
-    - name: Convert and upload test results
+    
+    - name: Convert TRX to JUnit
       run: |
         dotnet tool install --global trx2junit
-        trx2junit test_results.trx
-      continue-on-error: true
-
-    - name: Upload Test Results
-      uses: actions/upload-artifact@v3
-      with:
-        name: TestResults
-        path: test_results.xml
+        trx2junit $(find . -name 'test_results.trx')
+      continue-on
