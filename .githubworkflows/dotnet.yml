@@ -1,26 +1,23 @@
-name: .NET Core
+name: .NET
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
   pull_request:
-    branches:
-      - main
+    branches: [ "main" ]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
-    - name: Set up .NET Core
-      uses: actions/setup-dotnet@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '7.x' # Specify your .NET version
+        dotnet-version: '8.0.x'
 
     - name: Restore dependencies
       run: dotnet restore
@@ -28,5 +25,23 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
 
-    - name: Run tests
-      run: dotnet test --no-restore --verbosity normal
+    - name: Run Tests
+      run: dotnet test --no-build --logger "trx;LogFileName=test_results.trx"
+
+    - name: Publish Test Results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: TestResults
+        path: test_results.trx
+
+    - name: Convert Test Results to JUnit
+      if: always()
+      run: dotnet tool install --global trx2junit && trx2junit test_results.trx
+
+    - name: Upload Test Report
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: junit-results
+        path: test_results.xml
