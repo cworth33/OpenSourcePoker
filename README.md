@@ -74,7 +74,7 @@ The `DeckValidationController` provides endpoints to create and validate shuffle
 To get a shuffled deck, send a POST request to the `/api/DeckValidation/GetDeck` endpoint with a list of participants:
 
 ```json
-POST /api/DeckValidation/GetDeck
+POST https://opensourcepoker.azurewebsites.net/api/DeckValidation/GetDeck
 [
     {
       "Name": "Operator",
@@ -96,7 +96,7 @@ POST /api/DeckValidation/GetDeck
 To validate a shuffled deck, send a POST request to the `/api/DeckValidation/ValidateDeck` endpoint with the deck information:
 
 ```json
-POST /api/DeckValidation/ValidateDeck
+POST https://opensourcepoker.azurewebsites.net/api/DeckValidation/ValidateDeck
 {
   "deckString": "Td Kc Jd 5d 9h 4h Kd 9s Jc Th 8s 2h 4c 3s Js 6c Kh Qc 7d Qh 6h Ts 5c 8h 5s Ks 9d 8d 2s Ad Ac 3c 7s 4d 2c Qs 3h 4s Tc 5h 2d 6d 7h 7c 9c Ah Jh Qd As 3d 8c 6s",
   "participants": [
